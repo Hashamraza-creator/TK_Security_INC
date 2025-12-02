@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact TK Security Inc.</title>
+    <!-- Load Bootstrap 5 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Load Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        /* --- CSS Variables (Consistent with services_page.html) --- */
+        :root {
+            --primary-color: #1557b0; /* Blue */
+            --primary-dark: #0d47a1; /* Darker Blue for contrast */
+            --primary-light: #5b9cf5; /* Lighter Blue/Accent */
+            --accent-color: #26c6da; /* Cyan/Teal for highlight */
+            --text-dark: #202124;
+            --text-light: #5f6368;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+            --success-color: #34a853;
+            --inter-font: 'Inter', sans-serif;
+        }
+
+        /* --- Global Styles --- */
+        body {
+            font-family: var(--inter-font);
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            /* Required for fixed header */
+            padding-top: 90px;
+        }
+
+        /* --- Section Header Styles (Consistent) --- */
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        /* --- Custom Contact Styles --- */
+        .contact-form-card {
+            background-color: var(--bg-white);
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-box {
+            background-color: var(--primary-dark);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        .info-box i {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Adjusting Bootstrap Button Colors */
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+    </style>
+</head>
+
+<body style="padding-top: 90px;">
+    <!-- HEADER INCLUSION -->
+    <div id="header"></div>
+    <script>
+    fetch("header.html") 
+      .then(res => res.text())
+      .then(data => {
+            document.querySelector("#header").innerHTML = data;
+        });
+    </script>
+    
+    <!-- Hero Section -->
+    <div class="py-5 bg-white border-bottom shadow-sm">
+        <div class="container text-center">
+            <h1 class="section-title mb-3">Get in Touch with TK Security</h1>
+            <p class="mt-4 lead font-light text-text-light">
+                We are available 24/7 for emergency support and general inquiries.
+            </p>
+        </div>
+    </div>
+
+    <!-- Contact Form and Details Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                
+                <!-- Contact Form Column -->
+                <div class="col-lg-7">
+                    <div class="contact-form-card">
+                        <h3 class="fw-bold mb-4" style="color: var(--primary-dark);">Send Us a Message</h3>
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" class="form-control rounded-pill" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control rounded-pill" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control rounded-pill" id="subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Your Message</label>
+                                <textarea class="form-control rounded-3" id="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill mt-3">
+                                Send Inquiry <i class="fas fa-paper-plane ms-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Details Column -->
+                <div class="col-lg-5">
+                    <div class="info-box text-center">
+                        <h4 class="fw-bold mb-4 text-white">Contact Information</h4>
+                        
+                        <div class="mb-4">
+                            <i class="fas fa-phone-alt"></i>
+                            <p class="fw-bold mt-2 mb-0">Emergency Line (24/7)</p>
+                            <p class="fs-4 mb-0 text-white">(+92) 555-123-4567</p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <i class="fas fa-envelope"></i>
+                            <p class="fw-bold mt-2 mb-0">General Inquiries</p>
+                            <p class="text-white">info@tksecurityinc.com</p>
+                        </div>
+
+                        <div class="mb-4">
+                            <i class="fas fa-location-dot"></i>
+                            <p class="fw-bold mt-2 mb-0">Head Office</p>
+                            <p class="text-white">Office 101, Blue Tower, Security Rd, City Center, PK</p>
+                        </div>
+
+                        <div class="mt-5">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10000.0!2d73.0471!3d33.6844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDEzJzU4LjQiTiA3M8KwMDMnMzEuNCJF!5e0!3m2!1sen!2s!4v1678888888888!5m2!1sen!2s" 
+                                width="100%" height="200" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer/CTA -->
+    <footer class="text-center py-5 bg-white border-top">
+        <div class="container">
+            <h4 class="mb-3 text-dark">Need an immediate security assessment?</h4>
+            <p class="text-secondary mb-4">Click below to request a customized quote for your needs.</p>
+            <a href="get_a_quote.html" class="btn btn-primary btn-lg px-5 py-3">
+                <i class="fas fa-calculator me-2"></i> Get a Free Quote
+            </a>
+        </div>
+    </footer>
+
+    <!-- Load Bootstrap 5 JS Bundle -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

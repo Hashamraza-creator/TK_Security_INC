@@ -3,169 +3,347 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rubicon Security - Professional Security Services</title>
+    <title>Tk Security INC</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
-<!-- SECTION 1: HEADER & NAVIGATION -->
-<header class="navbar-header">
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container-fluid px-5">
-            <a class="navbar-brand brand-logo" href="#home">
-                <i class="fas fa-shield-alt me-2"></i>Rubicon Security
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-                <button class="btn btn-primary ms-3">Call Now</button>
-            </div>
-        </div>
-    </nav>
-</header>
+<!-- HEADER INCLUDE (HTML Version) -->
+<div id="header"></div>
+<script>
+fetch("/header.html")
+  .then(res => res.text())
+  .then(data => document.querySelector("#header").innerHTML = data);
+</script>
 
-<!-- SECTION 2: HERO BANNER -->
-<section id="home" class="hero-section">
-    <div class="hero-overlay"></div>
-    <div class="container-fluid hero-content">
-        <div class="row align-items-center min-vh-100">
-            <div class="col-lg-6 hero-text">
-                <h1 class="hero-title display-3 fw-bold mb-4">
+<!-- ================= HERO CAROUSEL ================= -->
+<section id="home" class="hero-carousel-section">
+
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  
+      <div class="carousel-inner">
+  
+        <!-- SLIDE 1 -->
+        <div class="carousel-item active">
+          <div class="hero-slide">
+  
+            <div class="hero-overlay"></div>
+  
+            <div class="container-fluid hero-content">
+              <div class="row align-items-center min-vh-100">
+  
+                <div class="col-lg-6 hero-text">
+                  <h1 class="hero-title display-3 fw-bold mb-4">
                     24/7 Professional Security Protection
-                </h1>
-                <p class="hero-subtitle fs-5 mb-5">
-                    Your trusted partner in security. Armed & unarmed guards, executive protection, and comprehensive security solutions for businesses and individuals.
-                </p>
-                <div class="btn-group-hero">
-                    <button class="btn btn-primary btn-lg me-3 px-5 py-3"><i class="fas fa-phone me-2"></i> Call Now (310) 309-0762</button>
+                  </h1>
+                  <p class="hero-subtitle fs-5 mb-5">
+                    Your trusted partner in security. Armed & unarmed guards, executive protection, and security for businesses.
+                  </p>
+  
+                  <div class="btn-group-hero">
+                    <button class="btn btn-primary btn-lg me-3 px-5 py-3"><i class="fas fa-phone me-2"></i> Call Now</button>
                     <button class="btn btn-outline-light btn-lg px-5 py-3"><i class="fas fa-envelope me-2"></i> Get Quote</button>
+                  </div>
                 </div>
+  
+                <div class="col-lg-6 hero-image">
+                  <img src="/images/8468bda6-9602-4952-b7db-d91178b2ecbc-removebg-preview.png" class="img-fluid animate-float">
+                </div>
+  
+              </div>
             </div>
-            <div class="col-lg-6 hero-image">
-                <img src="/images/client1.jpg" alt="Security Guards" class="img-fluid animate-float">
+  
+            <!-- FLOATING FORM INSIDE SLIDE -->
+            <div class="floating-form-container">
+              <div class="floating-form">
+  
+                <div class="form-header">
+                  <div class="form-icon">
+                    <i class="fas fa-shield-alt"></i>
+                  </div>
+                  <h3>Get Free Quote</h3>
+                  <p>24/7 Security Consultation</p>
+                </div>
+  
+                <form id="heroForm">
+  
+                  <div class="form-group">
+                    <label class="form-label">Full Name</label>
+                    <div class="input-group-custom">
+                      <i class="fas fa-user input-icon"></i>
+                      <input type="text" class="form-control" placeholder="John Doe" required>
+                    </div>
+                  </div>
+  
+                  <div class="form-group">
+                    <label class="form-label">Phone Number</label>
+                    <div class="input-group-custom">
+                      <i class="fas fa-phone input-icon"></i>
+                      <input type="tel" class="form-control" placeholder="+92 300 0000000" required>
+                    </div>
+                  </div>
+  
+                  <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <div class="input-group-custom">
+                      <i class="fas fa-envelope input-icon"></i>
+                      <input type="email" class="form-control" placeholder="your@email.com" required>
+                    </div>
+                  </div>
+  
+                  <div class="form-group">
+                    <label class="form-label">Service Required</label>
+                    <div class="input-group-custom">
+                      <i class="fas fa-briefcase input-icon"></i>
+                      <select class="form-select" required>
+                        <option value="">Select Service</option>
+                        <option value="armed">Armed Guards</option>
+                        <option value="unarmed">Unarmed Guards</option>
+                        <option value="executive">Executive Protection</option>
+                        <option value="surveillance">CCTV & Surveillance</option>
+                        <option value="consultation">Consultation</option>
+                      </select>
+                    </div>
+                  </div>
+  
+                  <div class="form-group">
+                    <label class="form-label">Message (Optional)</label>
+                    <textarea class="form-control" placeholder="Brief description of your needs..."></textarea>
+                  </div>
+  
+                  <button type="submit" class="btn-submit-form">
+                    Request Quote <i class="fas fa-arrow-right"></i>
+                  </button>
+  
+                  <div class="trust-badges">
+                    <div class="trust-badge">
+                      <i class="fas fa-shield-alt"></i> Licensed
+                    </div>
+                    <div class="trust-badge">
+                      <i class="fas fa-clock"></i> 24/7 Support
+                    </div>
+                    <div class="trust-badge">
+                      <i class="fas fa-award"></i> 15+ Years
+                    </div>
+                  </div>
+  
+                </form>
+  
+              </div>
             </div>
+  
+          </div>
         </div>
+        <!-- END SLIDE 1 -->
+  
+  
+        <!-- SLIDE 2 -->
+        <div class="carousel-item">
+          <div class="hero-slide">
+            <div class="hero-overlay"></div>
+  
+            <div class="container-fluid hero-content">
+              <div class="row align-items-center min-vh-100">
+  
+                <div class="col-lg-6 hero-text">
+                  <h1 class="hero-title display-3 fw-bold mb-4">Armed & Unarmed Security Officers</h1>
+                  <p class="hero-subtitle fs-5 mb-5">Highly trained, licensed, and professional guards for every industry.</p>
+  
+                  <div class="btn-group-hero">
+                    <button class="btn btn-primary btn-lg me-3 px-5 py-3">Hire Now</button>
+                    <button class="btn btn-outline-light btn-lg px-5 py-3">Learn More</button>
+                  </div>
+                </div>
+  
+                <div class="col-lg-6 hero-image">
+                  <img src="/images/8468bda6-9602-4952-b7db-d91178b2ecbc-removebg-preview.png" class="img-fluid animate-float">
+                </div>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+  
+  
+        <!-- SLIDE 3 -->
+        <div class="carousel-item">
+          <div class="hero-slide">
+            <div class="hero-overlay"></div>
+  
+            <div class="container-fluid hero-content">
+              <div class="row align-items-center min-vh-100">
+  
+                <div class="col-lg-6 hero-text">
+                  <h1 class="hero-title display-3 fw-bold mb-4">Executive & VIP Protection</h1>
+                  <p class="hero-subtitle fs-5 mb-5">Elite protection services for celebrities, CEOs, diplomats & high-profile clients.</p>
+  
+                  <div class="btn-group-hero">
+                    <button class="btn btn-primary btn-lg me-3 px-5 py-3">Book Protection</button>
+                    <button class="btn btn-outline-light btn-lg px-5 py-3">Contact Us</button>
+                  </div>
+                </div>
+  
+                <div class="col-lg-6 hero-image">
+                  <img src="/images/8468bda6-9602-4952-b7db-d91178b2ecbc-removebg-preview.png" class="img-fluid animate-float">
+                </div>
+  
+              </div>
+            </div>
+  
+          </div>
+        </div>
+  
+      </div>
+  
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+      </div>
+  
     </div>
-</section>
-
-<!-- SECTION 3: SERVICES -->
-<section id="services" class="services-section py-5">
+  
+  </section>
+  
+  <section id="services" class="services-section py-5">
     <div class="container">
         <div class="section-header text-center mb-5">
-            <h2 class="section-title mb-3">Our Security Services</h2>
-            <p class="section-subtitle">Comprehensive protection tailored to your needs</p>
+            <h2 class="section-title mb-3">Sectors We Serve</h2>
+            <p class="section-subtitle">Comprehensive, specialized protection tailored for your industry</p>
         </div>
         
-        <div class="row g-4">
-            <!-- Service 1 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-user-shield"></i>
-                    </div>
-                    <h5 class="service-title">Armed & Unarmed Guards</h5>
-                    <p class="service-text">Professional security officers trained in threat assessment and emergency response for maximum protection of your premises.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check-circle"></i> Background verified staff</li>
-                        <li><i class="fas fa-check-circle"></i> 24/7 availability</li>
-                        <li><i class="fas fa-check-circle"></i> Professional training</li>
-                    </ul>
+        <div class="row g-4 justify-content-center">
+            
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="service-card text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="service-icon"><i class="fas fa-building"></i></div>
+                    <h5 class="service-title">Corporate Security</h5>
+                    <p class="service-text-small">Protecting headquarters, assets, and personnel.</p>
                 </div>
             </div>
 
-            <!-- Service 2 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-car"></i>
-                    </div>
-                    <h5 class="service-title">Marked Vehicle Patrol</h5>
-                    <p class="service-text">Visible security presence with marked patrol vehicles to deter criminal activity and provide rapid response.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check-circle"></i> GPS tracking</li>
-                        <li><i class="fas fa-check-circle"></i> Regular patrols</li>
-                        <li><i class="fas fa-check-circle"></i> Emergency response</li>
-                    </ul>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="service-card text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                    <h5 class="service-title">Financial Institutions</h5>
+                    <p class="service-text-small">Secure handling of high-value environments and data.</p>
                 </div>
             </div>
 
-            <!-- Service 3 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h5 class="service-title">Executive Protection</h5>
-                    <p class="service-text">Elite personal security services for executives, VIPs, and high-profile individuals with specialized training.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check-circle"></i> Threat assessment</li>
-                        <li><i class="fas fa-check-circle"></i> Travel security</li>
-                        <li><i class="fas fa-check-circle"></i> Risk management</li>
-                    </ul>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="service-card text-center" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="service-icon"><i class="fas fa-store"></i></div>
+                    <h5 class="service-title">Retail Venues</h5>
+                    <p class="service-text-small">Theft deterrence, surveillance, and customer safety.</p>
                 </div>
             </div>
 
-            <!-- Service 4 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-camera"></i>
-                    </div>
-                    <h5 class="service-title">Surveillance Systems</h5>
-                    <p class="service-text">State-of-the-art CCTV and monitoring systems with 24/7 professional surveillance and alert systems.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check-circle"></i> HD monitoring</li>
-                        <li><i class="fas fa-check-circle"></i> Cloud storage</li>
-                        <li><i class="fas fa-check-circle"></i> Instant alerts</li>
-                    </ul>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="service-card text-center" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="service-icon"><i class="fas fa-cart-shopping"></i></div>
+                    <h5 class="service-title">Shopping Centers</h5>
+                    <p class="service-text-small">Crowd management and large-scale premises security.</p>
                 </div>
             </div>
 
-            <!-- Service 5 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h5 class="service-title">Security Audits</h5>
-                    <p class="service-text">Comprehensive risk assessment and security evaluations to identify vulnerabilities and improve protection.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check-circle"></i> Vulnerability assessment</li>
-                        <li><i class="fas fa-check-circle"></i> Detailed reports</li>
-                        <li><i class="fas fa-check-circle"></i> Solutions planning</li>
-                    </ul>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="service-card text-center" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="service-icon"><i class="fas fa-house-medical"></i></div>
+                    <h5 class="service-title">Medical Facilities</h5>
+                    <p class="service-text-small">Patient, staff, and sensitive data protection.</p>
                 </div>
             </div>
 
-            <!-- Service 6 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-location-dot"></i>
-                    </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="service-card text-center" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="service-icon"><i class="fas fa-id-card"></i></div>
+                    <h5 class="service-title">Business Complexes</h5>
+                    <p class="service-text-small">Access control and common area patrolling.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="service-card text-center" data-aos="zoom-in" data-aos-delay="700">
+                    <div class="service-icon"><i class="fas fa-helmet-safety"></i></div>
+                    <h5 class="service-title">Construction Sites</h5>
+                    <p class="service-text-small">Equipment security and unauthorized entry prevention.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="service-card text-center" data-aos="zoom-in" data-aos-delay="800">
+                    <div class="service-icon"><i class="fas fa-bed"></i></div>
+                    <h5 class="service-title">Hotels and Motels</h5>
+                    <p class="service-text-small">Guest safety and hospitality-focused security.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="service-card text-center" data-aos="zoom-in" data-aos-delay="900">
+                    <div class="service-icon"><i class="fas fa-city"></i></div>
+                    <h5 class="service-title">Apartments & Condominiums</h5>
+                    <p class="service-text-small">Residential patrolling and community protection.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="service-card text-center" data-aos="zoom-in" data-aos-delay="1000">
+                    <div class="service-icon"><i class="fas fa-car-on"></i></div>
+                    <h5 class="service-title">Automotive Dealers</h5>
+                    <p class="service-text-small">Vehicle and inventory protection.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="service-card text-center service-special" data-aos="zoom-in" data-aos-delay="1100">
+                    <div class="service-icon"><i class="fas fa-location-dot"></i></div>
                     <h5 class="service-title">Event Security</h5>
-                    <p class="service-text">Specialized security teams for corporate events, concerts, conferences, and special occasions.</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check-circle"></i> Crowd control</li>
-                        <li><i class="fas fa-check-circle"></i> Access management</li>
-                        <li><i class="fas fa-check-circle"></i> Emergency protocols</li>
-                    </ul>
+                    <p class="service-text-small">Specialized security for high-profile gatherings.</p>
                 </div>
             </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="service-card text-center service-special" data-aos="zoom-in" data-aos-delay="1200">
+                    <div class="service-icon"><i class="fas fa-user-tie"></i></div>
+                    <h5 class="service-title">Executive Protection</h5>
+                    <p class="service-text-small">Personal, discreet security for high-profile clients.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="service-card text-center service-special" data-aos="zoom-in" data-aos-delay="1300">
+                    <div class="service-icon"><i class="fas fa-headset"></i></div>
+                    <h5 class="service-title">Concierge/Desk Security</h5>
+                    <p class="service-text-small">Front-facing security and visitor management.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="service-card text-center service-special" data-aos="zoom-in" data-aos-delay="1400">
+                    <div class="service-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+                    <h5 class="service-title">Loss Prevention</h5>
+                    <p class="service-text-small">Strategic planning to minimize financial loss.</p>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="service-card text-center service-special" data-aos="zoom-in" data-aos-delay="1500">
+                    <div class="service-icon"><i class="fas fa-user-shield"></i></div>
+                    <h5 class="service-title">Security Guard</h5>
+                    <p class="service-text-small">Trained, professional uniformed security officers.</p>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="text-center mt-5">
+            <a href="/services.html" class="btn btn-primary-animate">View All Services <i class="fas fa-arrow-right ms-2"></i></a>
         </div>
     </div>
 </section>
-
 <!-- SECTION 4: ABOUT / WHY CHOOSE US -->
 <section id="about" class="about-section py-5">
     <div class="container">
@@ -203,6 +381,95 @@
         </div>
     </div>
 </section>
+ <!-- Tk Security Section -->
+ <section class="allied-section">
+    <div class="container">
+        
+        <!-- Section Heading -->
+        <div class="section-heading" data-aos="fade-up">
+            <h2>WE TK Security INC <br>WE PROUDLY SERVE</h2>
+        </div>
+        
+        <div class="row align-items-center">
+            
+            <!-- Left Side - Banner Image -->
+            <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                <div class="allied-banner">
+                    <img src="https://images.unsplash.com/photo-1580757468214-c73f7062a5cb?w=600&h=700&fit=crop" 
+                         alt="Tk Security">
+                </div>
+            </div>
+            
+            <!-- Right Side - Content & Checklist -->
+            <div class="col-lg-6" data-aos="fade-left">
+                <div class="allied-content">
+                    
+                    <!-- Description Text -->
+                    <p class="allied-text">
+                        TK Security is a Southern California based security guard services company. We provide Unarmed and Armed security guard officers to large and small commercial, industrial and residential clients. Tk Security offer wide range of customers efficient and friendly security services according to their needs at very affordable rates and for all type of security services.
+                    </p>
+                    
+                    <!-- Checklist Items -->
+                    <div class="checklist">
+                        <div class="checklist-item" data-aos="fade-up" data-aos-delay="0">
+                            <div class="check-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>High Rise Buildings</span>
+                        </div>
+                        
+                        <div class="checklist-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="check-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Construction Sites</span>
+                        </div>
+                        
+                        <div class="checklist-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="check-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Financial Institutions</span>
+                        </div>
+                        
+                        <div class="checklist-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="check-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Medical Facilities</span>
+                        </div>
+                        
+                        <div class="checklist-item" data-aos="fade-up" data-aos-delay="400">
+                            <div class="check-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Gated Communities</span>
+                        </div>
+                        
+                        <div class="checklist-item" data-aos="fade-up" data-aos-delay="500">
+                            <div class="check-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <span>Shopping Centers</span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<script>
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100
+    });
+</script>
+
+
 
 <!-- SECTION 5: TESTIMONIALS -->
 <section id="testimonials" class="testimonials-section py-5">
@@ -344,58 +611,16 @@
     </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer-section">
-    <div class="container">
-        <div class="row mb-5">
-            <div class="col-md-3 mb-4 mb-md-0">
-                <h5 class="footer-title mb-3">About Rubicon</h5>
-                <p class="footer-text">Professional security services protecting businesses and individuals across Southern California. Our commitment to excellence is unwavering.</p>
-            </div>
-            <div class="col-md-3 mb-4 mb-md-0">
-                <h5 class="footer-title mb-3">Services</h5>
-                <ul class="footer-links">
-                    <li><a href="#services">Armed & Unarmed Guards</a></li>
-                    <li><a href="#services">Vehicle Patrol</a></li>
-                    <li><a href="#services">Executive Protection</a></li>
-                    <li><a href="#services">Surveillance Systems</a></li>
-                </ul>
-            </div>
-            <div class="col-md-3 mb-4 mb-md-0">
-                <h5 class="footer-title mb-3">Quick Links</h5>
-                <ul class="footer-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="col-md-3">
-                <h5 class="footer-title mb-3">Follow Us</h5>
-                <div class="social-links">
-                    <a href="#" class="social-link" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-        </div>
 
-        <hr class="footer-divider">
-        
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <p class="mb-0">&copy; 2025 Rubicon Security System Inc. All rights reserved. PPO 121394</p>
-            </div>
-            <div class="col-md-6 text-md-end">
-                <ul class="footer-links d-inline-flex gap-3 mb-0">
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
+<!-- Footer Include -->
+<div id="footer"></div>
+
+<script>
+fetch("/footer.html")
+  .then(res => res.text())
+  .then(data => document.querySelector("#footer").innerHTML = data);
+</script>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 <script src="/js/custom.js"></script>
