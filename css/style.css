@@ -299,7 +299,12 @@ html {
   height: 10px;
   border-radius: 50%;
 }
-
+@media screen and (max-width: 768px) {
+  .carousel-indicators {
+    display:none;
+  }
+  
+}
 /* NEW ANIMATIONS */
 @keyframes fadeInLeft {
 from { opacity: 0; transform: translateX(-60px); }
@@ -1161,4 +1166,49 @@ to { opacity: 1; transform: translateX(0); }
       font-size: 16px;
   }
 }
- 
+ /* ================= CLIENT LOGO STRIP ================= */
+.client-strip {
+  background: var(--primary-light);
+  overflow: hidden;
+  position: relative;
+}
+
+.client-strip-wrapper {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.client-strip-track {
+  display: flex;
+  gap: 3rem;
+  animation: scrollLogos 20s linear infinite;
+}
+
+.client-logo img {
+  height: 60px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: filter 0.3s, transform 0.3s;
+}
+
+.client-logo img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+@keyframes scrollLogos {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .client-logo img {
+      height: 40px;
+  }
+}
