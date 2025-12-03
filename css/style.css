@@ -2,7 +2,7 @@
 /* Root Colors - Google Blue (#1a73e8) Theme */
 :root {
   --primary-color: #1557b0;
-  --primary-dark: #1557b0;
+  --primary-dark: #0d47a1; /* Using a darker shade from the Google Blue theme for contrast */
   --primary-light: #5b9cf5;
   --accent-color: #0d47a1;
   --text-dark: #202124;
@@ -322,7 +322,8 @@ to { opacity: 1; transform: translateX(0); }
         .floating-form-container {
           position: absolute;
           right: 50px;
-          top: 50%;
+          /* FIX: Biased the center position slightly lower to prevent overlap with fixed navbar */
+          top: 55%; 
           transform: translateY(-50%);
           z-index: 10;
           animation: slideInRight 1s ease;
@@ -342,11 +343,19 @@ to { opacity: 1; transform: translateX(0); }
       .floating-form {
           background: white;
           border-radius: 25px;
-          padding: 15px 15px;
+          /* Adjusted: Reduced vertical padding to make form shorter */
+          padding: 10px 30px; 
           box-shadow: 0 25px 60px rgba(0,0,0,0.4);
           width: 420px;
           position: relative;
           overflow: hidden;
+          
+          /* === FIX FOR CLIPPING AT THE BOTTOM === */
+          /* Limit the height of the form container and enable scrolling if content exceeds this limit. */
+          max-height: calc(100vh - 120px); /* 100vh minus 60px space above and 60px space below for padding/margins */
+          overflow-y: auto;
+          padding-bottom: 35px; /* Ensure space for scrolling visibility */
+          /* ======================================= */
       }
       
       .floating-form::before {
@@ -356,7 +365,8 @@ to { opacity: 1; transform: translateX(0); }
           left: 0;
           right: 0;
           height: 5px;
-          background: linear-gradient(90deg, var(--primary-blue), var(--dark-blue));
+          /* FIX: Using defined root variables */
+          background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
       }
       
       .form-header {
@@ -367,7 +377,8 @@ to { opacity: 1; transform: translateX(0); }
       .form-icon {
           width: 70px;
           height: 70px;
-          background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+          /* FIX: Using defined root variables */
+          background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
           border-radius: 50%;
           display: flex;
           align-items: center;
@@ -389,7 +400,8 @@ to { opacity: 1; transform: translateX(0); }
       .form-header h3 {
           font-size: 24px;
           font-weight: 700;
-          color: var(--dark-blue);
+          /* FIX: Using defined root variables */
+          color: var(--primary-dark);
           margin-bottom: 5px;
       }
       
@@ -400,7 +412,8 @@ to { opacity: 1; transform: translateX(0); }
       }
       
       .form-group {
-          margin-bottom: 18px;
+          /* Adjusted: Reduced vertical space between form groups */
+          margin-bottom: 15px; 
       }
       
       .form-label {
@@ -420,7 +433,8 @@ to { opacity: 1; transform: translateX(0); }
           left: 15px;
           top: 50%;
           transform: translateY(-50%);
-          color: var(--primary-blue);
+          /* FIX: Using defined root variables */
+          color: var(--primary-color);
           font-size: 16px;
           z-index: 1;
       }
@@ -428,26 +442,30 @@ to { opacity: 1; transform: translateX(0); }
       .form-control {
           border: 2px solid #e0e0e0;
           border-radius: 12px;
-          padding: 12px 15px 12px 45px;
+          /* Adjusted: Reduced vertical padding within input fields */
+          padding: 10px 15px 10px 45px; 
           font-size: 14px;
           transition: all 0.3s;
       }
       
       .form-control:focus {
-          border-color: var(--primary-blue);
+          /* FIX: Using defined root variables */
+          border-color: var(--primary-color);
           box-shadow: 0 0 0 0.2rem rgba(26, 115, 232, 0.1);
       }
       
       .form-select {
           border: 2px solid #e0e0e0;
           border-radius: 12px;
-          padding: 12px 15px 12px 45px;
+          /* Adjusted: Reduced vertical padding within select fields */
+          padding: 10px 15px 10px 45px;
           font-size: 14px;
           transition: all 0.3s;
       }
       
       .form-select:focus {
-          border-color: var(--primary-blue);
+          /* FIX: Using defined root variables */
+          border-color: var(--primary-color);
           box-shadow: 0 0 0 0.2rem rgba(26, 115, 232, 0.1);
       }
       
@@ -458,10 +476,12 @@ to { opacity: 1; transform: translateX(0); }
       }
       
       .btn-submit-form {
-          background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+          /* FIX: Using defined root variables */
+          background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
           color: white;
           border: none;
-          padding: 14px;
+          /* Adjusted: Reduced vertical padding on the button */
+          padding: 12px; 
           border-radius: 12px;
           font-weight: 600;
           font-size: 16px;
@@ -515,7 +535,8 @@ to { opacity: 1; transform: translateX(0); }
       .trust-badge i {
           display: block;
           font-size: 20px;
-          color: var(--primary-blue);
+          /* FIX: Using defined root variables */
+          color: var(--primary-color);
           margin-bottom: 5px;
       }
       
@@ -539,7 +560,8 @@ to { opacity: 1; transform: translateX(0); }
       @media (max-width: 1400px) {
           .floating-form {
               width: 380px;
-              padding: 30px 25px;
+              /* Adjusted: Reduced vertical padding here too */
+              padding: 20px 25px;
           }
           
           .hero-title {
@@ -817,7 +839,7 @@ to { opacity: 1; transform: translateX(0); }
 }
 
 .contact-box h4 {
-  color: white;
+  color: white !important; 
   font-weight: 700;
 }
 
@@ -1210,5 +1232,50 @@ to { opacity: 1; transform: translateX(0); }
 @media (max-width: 768px) {
   .client-logo img {
       height: 40px;
+  }
+}
+.masonry-grid {
+  /* Desktop (4 Columns) */
+  column-count: 4;
+  column-gap: 1rem; /* Gap between columns */
+}
+
+.gallery-item {
+  /* Essential: Ensures the image block does not break across columns */
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1rem;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.75rem; /* Rounded corners for aesthetics */
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Clear shadow */
+}
+
+.gallery-item:hover img {
+  transform: scale(1.03); /* Enhanced zoom effect on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments for column count */
+
+/* Tablet (3 Columns) */
+@media (max-width: 1200px) {
+  .masonry-grid {
+      column-count: 3;
+  }
+}
+
+/* Mobile (2 Columns) */
+@media (max-width: 768px) {
+  .masonry-grid {
+      column-count: 2;
   }
 }

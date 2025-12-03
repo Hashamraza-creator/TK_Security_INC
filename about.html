@@ -132,10 +132,10 @@
                     <p class="text-text-light">
                         Every officer and every piece of technology deployed is part of our promise to offer bespoke security strategies tailored to the unique risks faced by our clients, from corporate headquarters to residential estates.
                     </p>
-                    <a href="contact_us.html" class="btn btn-outline-primary btn-lg mt-3">Talk to Our Team <i class="fas fa-arrow-right ms-2"></i></a>
+                    <a href="/contact.html" class="btn btn-outline-primary btn-lg mt-3">Talk to Our Team <i class="fas fa-arrow-right ms-2"></i></a>
                 </div>
                 <div class="col-lg-6">
-                    <img src="https://placehold.co/600x400/1557b0/ffffff?text=TK+Security+History" class="img-fluid rounded-3 shadow-lg" alt="Security team meeting">
+                    <img src="/images/about.jpeg" class="img-fluid rounded-3 shadow-lg" alt="Security team meeting">
                 </div>
             </div>
         </div>
@@ -172,7 +172,7 @@
     </section>
 
     <!-- Footer/CTA -->
-    <footer class="text-center py-5 bg-white border-top">
+    <div class="text-center py-5 bg-white border-top">
         <div class="container">
             <h4 class="mb-3 text-dark">Join the TK Security Family</h4>
             <p class="text-secondary mb-4">Discover the difference a dedicated, professional security partner can make.</p>
@@ -180,8 +180,18 @@
                 <i class="fas fa-calendar-check me-2"></i> Get a Free Consultation
             </a>
         </div>
-    </footer>
-
+    </div>
+<footer
+    <div id="footer"></div>
+    <script>
+    fetch("/footer.html") 
+      .then(res => res.text())
+      .then(data => {
+            document.querySelector("footer").innerHTML = data;
+        });
+    </script>
+    <footer
+    
     <!-- Load Bootstrap 5 JS Bundle -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
