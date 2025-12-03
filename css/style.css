@@ -1193,6 +1193,7 @@ to { opacity: 1; transform: translateX(0); }
   background: var(--primary-light);
   overflow: hidden;
   position: relative;
+  gap: 20px;
 }
 
 .client-strip-wrapper {
