@@ -1,53 +1,383 @@
-<link rel="stylesheet" href="/css/style.css" >
-<!-- HEADER / NAVBAR -->
-<header class="navbar-header">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tk Security INC</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Security Website Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+        
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideInForm {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive Text Sizes */
+        @media (max-width: 768px) {
+            .hero-main-heading {
+                font-size: 2.2rem !important;
+            }
+            .hero-description {
+                font-size: 1rem !important;
+            }
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 0; overflow-x: hidden;">
 
-            <!-- Logo / Brand -->
-            <a class="navbar-brand brand-logo" href="#">
-                <img src="/images/logo-removebg-preview.png" alt="Rubicon Security Logo" width="80px" style="margin-left: 30px;">
-            </a>
-
-            <!-- Mobile Toggle -->
-            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-                <i class="fas fa-bars"></i>
-            </button>
-
-            <!-- Menu -->
-            <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav ms-auto align-items-lg-center">
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="/index.html">Home</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="/services.html">Services</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about.html">About Us</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="/book.html">Get a Quote</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="/contact.html">Contact</a>
-                    </li>
-
-                </ul>
-
-                <!-- Call Button -->
-                <div class="ms-lg-3 mt-3 mt-lg-0">
-                    <a href="tel:3103090762" class="btn btn-primary px-4 py-2">
-                        <i class="fas fa-phone me-2"></i> Call Now
-                    </a>
+<!-- Top Contact Bar -->
+<div style="background: #f8f9fa; padding: 12px 0; border-bottom: 1px solid #e0e0e0;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-2 mb-md-0 text-center text-md-start">
+                <!-- Logo -->
+                <img src="/images/logo-removebg-preview.png" 
+                     alt="Rubicon Security Logo" 
+                     style="height: 90px; width: auto;">
+            </div>
+            <div class="col-md-6">
+                <div class="row g-3">
+                    <!-- Phone -->
+                    <div class="col-sm-6 text-center text-sm-start">
+                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start">
+                            <div style="background: #1a3a6b; color: white; width: 45px; height: 45px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                                <i class="fas fa-phone" style="font-size: 18px;"></i>
+                            </div>
+                            <div>
+                                <div style="font-size: 12px; color: #666; font-weight: 500;">On-Call Service 24/7</div>
+                                <div style="font-size: 15px; color: #1a3a6b; font-weight: 700;">(310)309-0762</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Email -->
+                    <div class="col-sm-6 text-center text-sm-start">
+                        <div class="d-flex align-items-center justify-content-center justify-content-sm-start">
+                            <div style="background: #1a3a6b; color: white; width: 45px; height: 45px; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                                <i class="fas fa-envelope" style="font-size: 18px;"></i>
+                            </div>
+                            <div>
+                                <div style="font-size: 12px; color: #666; font-weight: 500;">Email Address</div>
+                                <div style="font-size: 13px; color: #1a3a6b; font-weight: 700; text-transform: uppercase;">info@Tkdecurity.com</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
             </div>
         </div>
-    </nav>
-</header>
+    </div>
+</div>
+
+<!-- Main Navigation -->
+<nav class="navbar navbar-expand-lg" style="background: #2a2a2a; padding: 0;">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" 
+                style="border: none; padding: 10px;">
+            <span style="color: white; font-size: 24px;"><i class="fas fa-bars"></i></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav w-100" style="margin: 0; padding: 0;">
+                <li class="nav-item" style="list-style: none;">
+                    <a class="nav-link" href="#" 
+                       style="background: #1a3a6b; color: white; padding: 20px 30px; font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.3s; display: block; border: none;"
+                       onmouseover="this.style.background='#b39350'"
+                       onmouseout="this.style.background='#c8a35f'">
+                        HOME
+                    </a>
+                </li>
+                <li class="nav-item" style="list-style: none;">
+                    <a class="nav-link" href="#" 
+                       style="color: white; padding: 20px 30px; font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.3s; display: block; border: none;"
+                       onmouseover="this.style.background='#3a3a3a'"
+                       onmouseout="this.style.background='transparent'">
+                        ABOUT US
+                    </a>
+                </li>
+                <li class="nav-item" style="list-style: none;">
+                    <a class="nav-link" href="#" 
+                       style="color: white; padding: 20px 30px; font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.3s; display: block; border: none;"
+                       onmouseover="this.style.background='#3a3a3a'"
+                       onmouseout="this.style.background='transparent'">
+                        SERVICES
+                    </a>
+                </li>
+                <li class="nav-item" style="list-style: none;">
+                    <a class="nav-link" href="#" 
+                       style="color: white; padding: 20px 30px; font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.3s; display: block; border: none;"
+                       onmouseover="this.style.background='#3a3a3a'"
+                       onmouseout="this.style.background='transparent'">
+                        QUALITY CONTROL
+                    </a>
+                </li>
+                <li class="nav-item" style="list-style: none;">
+                    <a class="nav-link" href="#" 
+                       style="color: white; padding: 20px 30px; font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.3s; display: block; border: none;"
+                       onmouseover="this.style.background='#3a3a3a'"
+                       onmouseout="this.style.background='transparent'">
+                        JOIN OUR TEAM
+                    </a>
+                </li>
+                <li class="nav-item" style="list-style: none;">
+                    <a class="nav-link" href="#" 
+                       style="color: white; padding: 20px 30px; font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; transition: all 0.3s; display: block; border: none;"
+                       onmouseover="this.style.background='#3a3a3a'"
+                       onmouseout="this.style.background='transparent'">
+                        CONTACT US
+                    </a>
+                </li>
+            </ul>
+            
+            <!-- Social Icons -->
+            <div class="d-flex align-items-center mt-3 mt-lg-0 justify-content-center justify-content-lg-end" 
+                 style="padding: 0 15px;">
+                <a href="#" style="color: white; margin: 0 10px; font-size: 20px; transition: all 0.3s;"
+                   onmouseover="this.style.color='#c8a35f'"
+                   onmouseout="this.style.color='white'">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+                <a href="#" style="color: white; margin: 0 10px; font-size: 20px; transition: all 0.3s;"
+                   onmouseover="this.style.color='#c8a35f'"
+                   onmouseout="this.style.color='white'">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section with Overlapping Form -->
+<div style="position: relative; ">
+    <!-- Hero Image Section -->
+    <div style="background: url('https://images.unsplash.com/photo-1543269865-cbf427effbad?w=1600&h=700&fit=crop') center/cover; height: 700px; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(26, 58, 107, 0.85) 0%, rgba(0, 0, 0, 0.7) 100%);"></div>
+        
+        <!-- Call Now Button (Top Center) -->
+        <!-- <div style="position: absolute; top: 30px; left: 50%; transform: translateX(-50%); z-index: 10; animation: fadeInDown 1s ease;">
+            <button style="background: #ff4545; color: white; border: none; padding: 12px 40px; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: all 0.3s; box-shadow: 0 5px 15px rgba(255, 69, 69, 0.4);"
+                    onmouseover="this.style.background='#e03939'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(255, 69, 69, 0.6)'"
+                    onmouseout="this.style.background='#ff4545'; this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(255, 69, 69, 0.4)'">
+                CALL NOW
+            </button>
+        </div> -->
+        
+        <!-- Hero Text Content - Left Side -->
+        <div class="container" style="height: 100%; position: relative; z-index: 5;">
+            <div class="row align-items-center" style="height: 100%;">
+                <div class="col-lg-7">
+                    <div style="padding: 40px 0;">
+                        <!-- Tagline -->
+                        <div style="color: #5b9cf5; font-size: 16px; font-weight: 600; letter-spacing: 3px; margin-bottom: 20px; text-transform: uppercase; animation: fadeInLeft 1s ease 0.2s both;">
+                            <span style="display: inline-block; width: 50px; height: 2px; background: #c8a35f; vertical-align: middle; margin-right: 15px;"></span>
+                            We Supply Protection
+                        </div>
+                        
+                        <!-- Main Heading -->
+                        <h1 class="hero-main-heading" style="color: white; font-size: 3.5rem; font-weight: 800; line-height: 1.2; margin-bottom: 25px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); animation: fadeInLeft 1s ease 0.4s both;">
+                            Professional Security<br>
+                            <span style="color: #5b9cf5;">Protection Services</span>
+                        </h1>
+                        
+                        <!-- Description -->
+                        <p class="hero-description" style="color: rgba(255,255,255,0.9); font-size: 1.2rem; line-height: 1.8; margin-bottom: 35px; max-width: 600px; animation: fadeInLeft 1s ease 0.6s both;">
+                            24/7 Armed & Unarmed Security Guards. Protecting your business, property, and peace of mind with professional excellence.
+                        </p>
+                        
+                        <!-- Buttons -->
+                        <div style="display: flex; gap: 20px; flex-wrap: wrap; animation: fadeInLeft 1s ease 0.8s both;">
+                            <button style="background: #1a3a6b; color: white; border: none; padding: 15px 35px; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: all 0.3s; box-shadow: 0 5px 20px #1a3a6b;"
+                                    onmouseover="this.style.background='#1a3a6b'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 25px rgba(200, 163, 95, 0.6)'"
+                                    onmouseout="this.style.background='#1a3a6b'; this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 20px rgba(200, 163, 95, 0.4)'">
+                                <i class="fas fa-shield-alt" style="margin-right: 10px;"></i> Our Services
+                            </button>
+                            <button style="background: transparent; color: white; border: 2px solid white; padding: 15px 35px; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: all 0.3s;"
+                                    onmouseover="this.style.background='white'; this.style.color='#1a3a6b'; this.style.transform='translateY(-3px)'"
+                                    onmouseout="this.style.background='transparent'; this.style.color='white'; this.style.transform='translateY(0)'">
+                                <i class="fas fa-phone-alt" style="margin-right: 10px;"></i> Contact Us
+                            </button>
+                        </div>
+                        
+                        <!-- Trust Badges -->
+                        <div style="display: flex; gap: 30px; margin-top: 50px; flex-wrap: wrap; animation: fadeInUp 1s ease 1s both;">
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div style="width: 60px; height: 60px; background: #5b9cf5; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid #5b9cf5;">
+                                    <i class="fas fa-shield-alt" style="font-size: 24px; color: #1a3a6b;"></i>
+                                </div>
+                                <div>
+                                    <div style="color: white; font-size: 24px; font-weight: 700;">15+</div>
+                                    <div style="color: rgba(255,255,255,0.8); font-size: 14px;">Years Experience</div>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div style="width: 60px; height: 60px; background: #5b9cf5; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid #5b9cf5;">
+                                    <i class="fas fa-user-shield" style="font-size: 24px; color: #1a3a6b;"></i>
+                                </div>
+                                <div>
+                                    <div style="color: white; font-size: 24px; font-weight: 700;">500+</div>
+                                    <div style="color: rgba(255,255,255,0.8); font-size: 14px;">Security Guards</div>
+                                </div>
+                            </div>
+                            
+                            <div style="display: flex; align-items: center; gap: 12px;">
+                                <div style="width: 60px; height: 60px; background: #5b9cf5; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid #5b9cf5;">
+                                    <i class="fas fa-clock" style="font-size: 24px; color: #1a3a6b;"></i>
+                                </div>
+                                <div>
+                                    <div style="color: white; font-size: 24px; font-weight: 700;">24/7</div>
+                                    <div style="color: rgba(255,255,255,0.8); font-size: 14px;">Available</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Overlapping Form (Half Hero, Half Below) -->
+    <div class="container" style="position: relative; z-index: 20;">
+        <div class="row justify-content-end">
+            <div class="col-lg-5 col-md-7">
+                <div style="background: #5b9cf5; padding: 50px 40px; margin-top: -250px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); animation: slideInForm 1s ease 0.5s both;">
+                    <h2 style="color: white; font-size: 32px; font-weight: 700; text-transform: uppercase; margin-bottom: 35px; text-align: center; letter-spacing: 1px;">
+                        REQUEST A QUOTE NOW
+                    </h2>
+                    
+                    <form>
+                        <!-- Name -->
+                        <div style="margin-bottom: 25px;">
+                            <input type="text" placeholder="Name" required
+                                   style="width: 100%; background: transparent; border: none; border-bottom: 2px solid rgba(255,255,255,0.5); padding: 12px 0; color: white; font-size: 16px; outline: none;"
+                                   onfocus="this.style.borderBottom='2px solid white'"
+                                   onblur="this.style.borderBottom='2px solid rgba(255,255,255,0.5)'">
+                        </div>
+                        
+                        <!-- Phone -->
+                        <div style="margin-bottom: 25px;">
+                            <input type="tel" placeholder="Phone" required
+                                   style="width: 100%; background: transparent; border: none; border-bottom: 2px solid rgba(255,255,255,0.5); padding: 12px 0; color: white; font-size: 16px; outline: none;"
+                                   onfocus="this.style.borderBottom='2px solid white'"
+                                   onblur="this.style.borderBottom='2px solid rgba(255,255,255,0.5)'">
+                        </div>
+                        
+                        <!-- Company -->
+                        <div style="margin-bottom: 25px;">
+                            <input type="text" placeholder="Company"
+                                   style="width: 100%; background: transparent; border: none; border-bottom: 2px solid rgba(255,255,255,0.5); padding: 12px 0; color: white; font-size: 16px; outline: none;"
+                                   onfocus="this.style.borderBottom='2px solid white'"
+                                   onblur="this.style.borderBottom='2px solid rgba(255,255,255,0.5)'">
+                        </div>
+                        
+                        <!-- Email -->
+                        <div style="margin-bottom: 25px;">
+                            <input type="email" placeholder="Email" required
+                                   style="width: 100%; background: transparent; border: none; border-bottom: 2px solid rgba(255,255,255,0.5); padding: 12px 0; color: white; font-size: 16px; outline: none;"
+                                   onfocus="this.style.borderBottom='2px solid white'"
+                                   onblur="this.style.borderBottom='2px solid rgba(255,255,255,0.5)'">
+                        </div>
+                        
+                        <!-- Location -->
+                        <div style="margin-bottom: 25px;">
+                            <input type="text" placeholder="Your Location"
+                                   style="width: 100%; background: transparent; border: none; border-bottom: 2px solid rgba(255,255,255,0.5); padding: 12px 0; color: white; font-size: 16px; outline: none;"
+                                   onfocus="this.style.borderBottom='2px solid white'"
+                                   onblur="this.style.borderBottom='2px solid rgba(255,255,255,0.5)'">
+                        </div>
+                        
+                        <!-- Message -->
+                        <div style="margin-bottom: 35px;">
+                            <textarea placeholder="Message" rows="4"
+                                      style="width: 100%; background: transparent; border: none; border-bottom: 2px solid rgba(255,255,255,0.5); padding: 12px 0; color: white; font-size: 16px; outline: none; resize: none;"
+                                      onfocus="this.style.borderBottom='2px solid white'"
+                                      onblur="this.style.borderBottom='2px solid rgba(255,255,255,0.5)'"></textarea>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <div style="text-align: center;">
+                            <button type="submit" 
+                                    style="background: white; color: black; border: none; padding: 15px 60px; font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: all 0.3s;"
+                                    onmouseover="this.style.background='#f0f0f0'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.3)'"
+                                    onmouseout="this.style.background='white'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                                SUBMIT
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Form placeholder animation
+    document.querySelectorAll('input, textarea').forEach(input => {
+        input.style.setProperty('color', 'white', 'important');
+        input.addEventListener('input', function() {
+            this.style.color = 'white';
+        });
+    });
+</script>
+
+</body>
+</html>

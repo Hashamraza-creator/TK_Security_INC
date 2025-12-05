@@ -18,509 +18,220 @@ fetch("/header.html")
   .then(data => document.querySelector("#header").innerHTML = data);
 </script>
 
-<!-- ================= HERO CAROUSEL ================= -->
-<section id="home" class="hero-carousel-section">
 
-    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-  
-      <div class="carousel-inner">
-  
-        <!-- SLIDE 1 (Form already included) -->
-        <div class="carousel-item active">
-          <div class="hero-slide">
-  
-            <div class="hero-overlay"></div>
-  
-            <div class="container-fluid hero-content">
-              <div class="row align-items-center min-vh-100">
-  
-                <div class="col-lg-6 hero-text">
-                  <h1 class="hero-title display-3 fw-bold mb-4">
-                    24/7 Professional Security Protection
-                  </h1>
-                  <p class="hero-subtitle fs-5 mb-5">
-                    Your trusted partner in security. Armed & unarmed guards, executive protection, and security for businesses.
-                  </p>
-  
-                  <div class="btn-group-hero">
-                    <button class="btn btn-primary btn-lg me-3 px-5 py-3"><i class="fas fa-phone me-2"></i> Call Now</button>
-                    <button class="btn btn-outline-light btn-lg px-5 py-3"><i class="fas fa-envelope me-2"></i> Get Quote</button>
-                  </div>
-                </div>
-  
-                <div class="col-lg-6 hero-image">
-                  <img src="/images/8468bda6-9602-4952-b7db-d91178b2ecbc-removebg-preview.png" class="img-fluid animate-float">
-                </div>
-  
-              </div>
-            </div>
-  
-            <!-- FLOATING FORM INSIDE SLIDE 1 -->
-            <div class="floating-form-container">
-              <div class="floating-form">
-  
-                <div class="form-header">
-                  <div class="form-icon">
-                    <i class="fas fa-shield-alt"></i>
-                  </div>
-                  <h3>Get Free Quote</h3>
-                  <p>24/7 Security Consultation</p>
-                </div>
-  
-                <form id="heroForm">
-  
-                  <div class="form-group">
-                    <label class="form-label">Full Name</label>
-                    <div class="input-group-custom">
-                      <i class="fas fa-user input-icon"></i>
-                      <input type="text" class="form-control" placeholder="John Doe" required>
-                    </div>
-                  </div>
-  
-                  <div class="form-group">
-                    <label class="form-label">Phone Number</label>
-                    <div class="input-group-custom">
-                      <i class="fas fa-phone input-icon"></i>
-                      <input type="tel" class="form-control" placeholder="+92 300 0000000" required>
-                    </div>
-                  </div>
-  
-                  <div class="form-group">
-                    <label class="form-label">Email Address</label>
-                    <div class="input-group-custom">
-                      <i class="fas fa-envelope input-icon"></i>
-                      <input type="email" class="form-control" placeholder="your@email.com" required>
-                    </div>
-                  </div>
-  
-                  <div class="form-group">
-                    <label class="form-label">Service Required</label>
-                    <div class="input-group-custom">
-                      <i class="fas fa-briefcase input-icon"></i>
-                      <select class="form-select" required>
-                        <option value="">Select Service</option>
-                        <option value="armed">Armed Guards</option>
-                        <option value="unarmed">Unarmed Guards</option>
-                        <option value="executive">Executive Protection</option>
-                        <option value="surveillance">CCTV & Surveillance</option>
-                        <option value="consultation">Consultation</option>
-                      </select>
-                    </div>
-                  </div>
-  
-                  <div class="form-group">
-                    <label class="form-label">Message (Optional)</label>
-                    <textarea class="form-control" placeholder="Brief description of your needs..."></textarea>
-                  </div>
-  
-                  <button type="submit" class="btn-submit-form">
-                    Request Quote <i class="fas fa-arrow-right"></i>
-                  </button>
-  
-                  <div class="trust-badges">
-                    <div class="trust-badge">
-                      <i class="fas fa-shield-alt"></i> Licensed
-                    </div>
-                    <div class="trust-badge">
-                      <i class="fas fa-clock"></i> 24/7 Support
-                    </div>
-                    <div class="trust-badge">
-                      <i class="fas fa-award"></i> 15+ Years
-                    </div>
-                  </div>
-  
-                </form>
-  
-              </div>
-            </div>
-            <!-- END FLOATING FORM INSIDE SLIDE 1 -->
-  
-          </div>
-        </div>
-        <!-- END SLIDE 1 -->
-  
-  
-        <!-- SLIDE 2 (Floating Form Added) -->
-        <div class="carousel-item">
-          <div class="hero-slide">
-            <div class="hero-overlay"></div>
-  
-            <div class="container-fluid hero-content">
-              <div class="row align-items-center min-vh-100">
-  
-                <div class="col-lg-6 hero-text">
-                  <h1 class="hero-title display-3 fw-bold mb-4">Armed & Unarmed Security Officers</h1>
-                  <p class="hero-subtitle fs-5 mb-5">Highly trained, licensed, and professional guards for every industry.</p>
-  
-                  <div class="btn-group-hero">
-                    <button class="btn btn-primary btn-lg me-3 px-5 py-3">Hire Now</button>
-                    <button class="btn btn-outline-light btn-lg px-5 py-3">Learn More</button>
-                  </div>
-                </div>
-  
-                <div class="col-lg-6 hero-image">
-                  <img src="/images/8468bda6-9602-4952-b7db-d91178b2ecbc-removebg-preview.png" class="img-fluid animate-float">
-                </div>
-  
-              </div>
-            </div>
-            
-            <!-- FLOATING FORM INSIDE SLIDE 2 -->
-            <div class="floating-form-container">
-              <div class="floating-form">
-  
-                <div class="form-header">
-                  <div class="form-icon">
-                    <i class="fas fa-shield-alt"></i>
-                  </div>
-                  <h3>Get Free Quote</h3>
-                  <p>24/7 Security Consultation</p>
-                </div>
-  
-                <form>
-  
-                  <div class="form-group">
-                    <label class="form-label">Full Name</label>
-                    <div class="input-group-custom">
-                      <i class="fas fa-user input-icon"></i>
-                      <input type="text" class="form-control" placeholder="John Doe" required>
-                    </div>
-                  </div>
-  
-                  <div class="form-group">
-                    <label class="form-label">Phone Number</label>
-                    <div class="input-group-custom">
-                      <i class="fas fa-phone input-icon"></i>
-                      <input type="tel" class="form-control" placeholder="+92 300 0000000" required>
-                    </div>
-                  </div>
-  
-                  <div class="form-group">
-                    <label class="form-label">Email Address</label>
-                    <div class="input-group-custom">
-                      <i class="fas fa-envelope input-icon"></i>
-                      <input type="email" class="form-control" placeholder="your@email.com" required>
-                    </div>
-                  </div>
-  
-                  <div class="form-group">
-                    <label class="form-label">Service Required</label>
-                    <div class="input-group-custom">
-                      <i class="fas fa-briefcase input-icon"></i>
-                      <select class="form-select" required>
-                        <option value="">Select Service</option>
-                        <option value="armed">Armed Guards</option>
-                        <option value="unarmed">Unarmed Guards</option>
-                        <option value="executive">Executive Protection</option>
-                        <option value="surveillance">CCTV & Surveillance</option>
-                        <option value="consultation">Consultation</option>
-                      </select>
-                    </div>
-                  </div>
-  
-                  <div class="form-group">
-                    <label class="form-label">Message (Optional)</label>
-                    <textarea class="form-control" placeholder="Brief description of your needs..."></textarea>
-                  </div>
-  
-                  <button type="submit" class="btn-submit-form">
-                    Request Quote <i class="fas fa-arrow-right"></i>
-                  </button>
-  
-                  <div class="trust-badges">
-                    <div class="trust-badge">
-                      <i class="fas fa-shield-alt"></i> Licensed
-                    </div>
-                    <div class="trust-badge">
-                      <i class="fas fa-clock"></i> 24/7 Support
-                    </div>
-                    <div class="trust-badge">
-                      <i class="fas fa-award"></i> 15+ Years
-                    </div>
-                  </div>
-  
-                </form>
-  
-              </div>
-            </div>
-            <!-- END FLOATING FORM INSIDE SLIDE 2 -->
 
+ 
+  
+<section style="background: #000; padding: 80px 0;">
+  <div class="container">
+      
+      <!-- Section Header -->
+      <div style="text-align: center; margin-bottom: 60px;">
+          <div style="color: #ff4545; font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px;">
+              OUR SERVICES
           </div>
-        </div>
-        <!-- END SLIDE 2 -->
-  
-  
-        <!-- SLIDE 3 (Floating Form Added) -->
-        <div class="carousel-item">
-          <div class="hero-slide">
-            <div class="hero-overlay"></div>
-  
-            <div class="container-fluid hero-content">
-              <div class="row align-items-center min-vh-100">
-  
-                <div class="col-lg-6 hero-text">
-                  <h1 class="hero-title display-3 fw-bold mb-4">Executive & VIP Protection</h1>
-                  <p class="hero-subtitle fs-5 mb-5">Elite protection services for celebrities, CEOs, diplomats & high-profile clients.</p>
-  
-                  <div class="btn-group-hero">
-                    <button class="btn btn-primary btn-lg me-3 px-5 py-3">Book Protection</button>
-                    <button class="btn btn-outline-light btn-lg px-5 py-3">Contact Us</button>
-                  </div>
-                </div>
-  
-                <div class="col-lg-6 hero-image">
-                  <img src="/images/8468bda6-9602-4952-b7db-d91178b2ecbc-removebg-preview.png" class="img-fluid animate-float">
-                </div>
-  
-              </div>
-            </div>
-
-            <!-- FLOATING FORM INSIDE SLIDE 3 -->
-            <div class="floating-form-container">
-              <div class="floating-form">
-  
-                <div class="form-header">
-                  <div class="form-icon">
-                    <i class="fas fa-shield-alt"></i>
-                  </div>
-                  <h3>Get Free Quote</h3>
-                  <p>24/7 Security Consultation</p>
-                </div>
-  
-                <form>
-  
-                  <div class="form-group">
-                    <label class="form-label">Full Name</label>
-                    <div class="input-group-custom">
-                      <i class="fas fa-user input-icon"></i>
-                      <input type="text" class="form-control" placeholder="John Doe" required>
-                    </div>
-                  </div>
-  
-                  <div class="form-group">
-                    <label class="form-label">Phone Number</label>
-                    <div class="input-group-custom">
-                      <i class="fas fa-phone input-icon"></i>
-                      <input type="tel" class="form-control" placeholder="+92 300 0000000" required>
-                    </div>
-                  </div>
-  
-                  <div class="form-group">
-                    <label class="form-label">Email Address</label>
-                    <div class="input-group-custom">
-                      <i class="fas fa-envelope input-icon"></i>
-                      <input type="email" class="form-control" placeholder="your@email.com" required>
-                    </div>
-                  </div>
-  
-                  <div class="form-group">
-                    <label class="form-label">Service Required</label>
-                    <div class="input-group-custom">
-                      <i class="fas fa-briefcase input-icon"></i>
-                      <select class="form-select" required>
-                        <option value="">Select Service</option>
-                        <option value="armed">Armed Guards</option>
-                        <option value="unarmed">Unarmed Guards</option>
-                        <option value="executive">Executive Protection</option>
-                        <option value="surveillance">CCTV & Surveillance</option>
-                        <option value="consultation">Consultation</option>
-                      </select>
-                    </div>
-                  </div>
-  
-                  <div class="form-group">
-                    <label class="form-label">Message (Optional)</label>
-                    <textarea class="form-control" placeholder="Brief description of your needs..."></textarea>
-                  </div>
-  
-                  <button type="submit" class="btn-submit-form">
-                    Request Quote <i class="fas fa-arrow-right"></i>
-                  </button>
-  
-                  <div class="trust-badges">
-                    <div class="trust-badge">
-                      <i class="fas fa-shield-alt"></i> Licensed
-                    </div>
-                    <div class="trust-badge">
-                      <i class="fas fa-clock"></i> 24/7 Support
-                    </div>
-                    <div class="trust-badge">
-                      <i class="fas fa-award"></i> 15+ Years
-                    </div>
-                  </div>
-  
-                </form>
-  
-              </div>
-            </div>
-            <!-- END FLOATING FORM INSIDE SLIDE 3 -->
-  
-          </div>
-        </div>
-        <!-- END SLIDE 3 -->
-  
+          <h2 style="color: white; font-size: 3rem; font-weight: 800; text-transform: uppercase;">
+              WHAT WE OFFER
+          </h2>
       </div>
-  
-      <!-- Indicators -->
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+      
+      <!-- Services Grid -->
+      <div class="row g-4">
+          
+          <!-- Service 1: Security Guard -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+              <div style="background: transparent; border: 2px solid #1a3a6b; padding: 40px 20px; text-align: center; cursor: pointer; transition: all 0.4s; height: 100%;"
+                   onmouseover="this.style.background='#1a3a6b'; this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(26, 58, 107, 0.5)'"
+                   onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                  <div style="margin-bottom: 25px;">
+                      <i class="fas fa-user-shield" style="font-size: 60px; color: white; transition: all 0.4s;"></i>
+                  </div>
+                  <h4 style="color: white; font-size: 18px; font-weight: 700; margin: 0;">Security Guard</h4>
+              </div>
+          </div>
+          
+          <!-- Service 2: Retail Venues -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+              <div style="background: transparent; border: 2px solid #1a3a6b; padding: 40px 20px; text-align: center; cursor: pointer; transition: all 0.4s; height: 100%;"
+                   onmouseover="this.style.background='#1a3a6b'; this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(26, 58, 107, 0.5)'"
+                   onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                  <div style="margin-bottom: 25px;">
+                      <i class="fas fa-store" style="font-size: 60px; color: white; transition: all 0.4s;"></i>
+                  </div>
+                  <h4 style="color: white; font-size: 18px; font-weight: 700; margin: 0;">Retail Venues</h4>
+              </div>
+          </div>
+          
+          <!-- Service 3: Loss Prevention -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+              <div style="background: transparent; border: 2px solid #1a3a6b; padding: 40px 20px; text-align: center; cursor: pointer; transition: all 0.4s; height: 100%;"
+                   onmouseover="this.style.background='#1a3a6b'; this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(26, 58, 107, 0.5)'"
+                   onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                  <div style="margin-bottom: 25px;">
+                      <i class="fas fa-shield-alt" style="font-size: 60px; color: white; transition: all 0.4s;"></i>
+                  </div>
+                  <h4 style="color: white; font-size: 18px; font-weight: 700; margin: 0;">Loss Prevention</h4>
+              </div>
+          </div>
+          
+          <!-- Service 4: Event Security -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+              <div style="background: transparent; border: 2px solid #1a3a6b; padding: 40px 20px; text-align: center; cursor: pointer; transition: all 0.4s; height: 100%;"
+                   onmouseover="this.style.background='#1a3a6b'; this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(26, 58, 107, 0.5)'"
+                   onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                  <div style="margin-bottom: 25px;">
+                      <i class="fas fa-calendar-check" style="font-size: 60px; color: white; transition: all 0.4s;"></i>
+                  </div>
+                  <h4 style="color: white; font-size: 18px; font-weight: 700; margin: 0;">Event Security</h4>
+              </div>
+          </div>
+          
+          <!-- Service 5: Concierge Services -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+              <div style="background: transparent; border: 2px solid #1a3a6b; padding: 40px 20px; text-align: center; cursor: pointer; transition: all 0.4s; height: 100%;"
+                   onmouseover="this.style.background='#1a3a6b'; this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(26, 58, 107, 0.5)'"
+                   onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                  <div style="margin-bottom: 25px;">
+                      <i class="fas fa-user-tie" style="font-size: 60px; color: white; transition: all 0.4s;"></i>
+                  </div>
+                  <h4 style="color: white; font-size: 18px; font-weight: 700; margin: 0;">Concierge Services/Front Desk Security</h4>
+              </div>
+          </div>
+          
+          <!-- Service 6: Corporate Security -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+              <div style="background: transparent; border: 2px solid #1a3a6b; padding: 40px 20px; text-align: center; cursor: pointer; transition: all 0.4s; height: 100%;"
+                   onmouseover="this.style.background='#1a3a6b'; this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(26, 58, 107, 0.5)'"
+                   onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                  <div style="margin-bottom: 25px;">
+                      <i class="fas fa-briefcase" style="font-size: 60px; color: white; transition: all 0.4s;"></i>
+                  </div>
+                  <h4 style="color: white; font-size: 18px; font-weight: 700; margin: 0;">Corporate Security</h4>
+              </div>
+          </div>
+          
+          <!-- Service 7: Shopping Centers -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+              <div style="background: transparent; border: 2px solid #1a3a6b; padding: 40px 20px; text-align: center; cursor: pointer; transition: all 0.4s; height: 100%;"
+                   onmouseover="this.style.background='#1a3a6b'; this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(26, 58, 107, 0.5)'"
+                   onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                  <div style="margin-bottom: 25px;">
+                      <i class="fas fa-shopping-cart" style="font-size: 60px; color: white; transition: all 0.4s;"></i>
+                  </div>
+                  <h4 style="color: white; font-size: 18px; font-weight: 700; margin: 0;">Shopping Centers</h4>
+              </div>
+          </div>
+          
+          <!-- Service 8: Medical Facilities -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+              <div style="background: transparent; border: 2px solid #1a3a6b; padding: 40px 20px; text-align: center; cursor: pointer; transition: all 0.4s; height: 100%;"
+                   onmouseover="this.style.background='#1a3a6b'; this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(26, 58, 107, 0.5)'"
+                   onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                  <div style="margin-bottom: 25px;">
+                      <i class="fas fa-hospital" style="font-size: 60px; color: white; transition: all 0.4s;"></i>
+                  </div>
+                  <h4 style="color: white; font-size: 18px; font-weight: 700; margin: 0;">Medical Facilities</h4>
+              </div>
+          </div>
+          
+          <!-- Service 9: Business Complexes -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+              <div style="background: transparent; border: 2px solid #1a3a6b; padding: 40px 20px; text-align: center; cursor: pointer; transition: all 0.4s; height: 100%;"
+                   onmouseover="this.style.background='#1a3a6b'; this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(26, 58, 107, 0.5)'"
+                   onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                  <div style="margin-bottom: 25px;">
+                      <i class="fas fa-id-card" style="font-size: 60px; color: white; transition: all 0.4s;"></i>
+                  </div>
+                  <h4 style="color: white; font-size: 18px; font-weight: 700; margin: 0;">Business Complexes</h4>
+              </div>
+          </div>
+          
+          <!-- Service 10: Financial Institutions -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+              <div style="background: transparent; border: 2px solid #1a3a6b; padding: 40px 20px; text-align: center; cursor: pointer; transition: all 0.4s; height: 100%;"
+                   onmouseover="this.style.background='#1a3a6b'; this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(26, 58, 107, 0.5)'"
+                   onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                  <div style="margin-bottom: 25px;">
+                      <i class="fas fa-chart-line" style="font-size: 60px; color: white; transition: all 0.4s;"></i>
+                  </div>
+                  <h4 style="color: white; font-size: 18px; font-weight: 700; margin: 0;">Financial Institutions</h4>
+              </div>
+          </div>
+          
+          <!-- Service 11: Construction Sites -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+              <div style="background: transparent; border: 2px solid #1a3a6b; padding: 40px 20px; text-align: center; cursor: pointer; transition: all 0.4s; height: 100%;"
+                   onmouseover="this.style.background='#1a3a6b'; this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(26, 58, 107, 0.5)'"
+                   onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                  <div style="margin-bottom: 25px;">
+                      <i class="fas fa-hard-hat" style="font-size: 60px; color: white; transition: all 0.4s;"></i>
+                  </div>
+                  <h4 style="color: white; font-size: 18px; font-weight: 700; margin: 0;">Construction Sites</h4>
+              </div>
+          </div>
+          
+          <!-- Service 12: Hotels and Motels -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+              <div style="background: transparent; border: 2px solid #1a3a6b; padding: 40px 20px; text-align: center; cursor: pointer; transition: all 0.4s; height: 100%;"
+                   onmouseover="this.style.background='#1a3a6b'; this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(26, 58, 107, 0.5)'"
+                   onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                  <div style="margin-bottom: 25px;">
+                      <i class="fas fa-hotel" style="font-size: 60px; color: white; transition: all 0.4s;"></i>
+                  </div>
+                  <h4 style="color: white; font-size: 18px; font-weight: 700; margin: 0;">Hotels and Motels</h4>
+              </div>
+          </div>
+          
+          <!-- Service 13: Apartments -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+              <div style="background: transparent; border: 2px solid #1a3a6b; padding: 40px 20px; text-align: center; cursor: pointer; transition: all 0.4s; height: 100%;"
+                   onmouseover="this.style.background='#1a3a6b'; this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(26, 58, 107, 0.5)'"
+                   onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                  <div style="margin-bottom: 25px;">
+                      <i class="fas fa-building" style="font-size: 60px; color: white; transition: all 0.4s;"></i>
+                  </div>
+                  <h4 style="color: white; font-size: 18px; font-weight: 700; margin: 0;">Apartments and Condominiums</h4>
+              </div>
+          </div>
+          
+          <!-- Service 14: Executive Protection -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+              <div style="background: transparent; border: 2px solid #1a3a6b; padding: 40px 20px; text-align: center; cursor: pointer; transition: all 0.4s; height: 100%;"
+                   onmouseover="this.style.background='#1a3a6b'; this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(26, 58, 107, 0.5)'"
+                   onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                  <div style="margin-bottom: 25px;">
+                      <i class="fas fa-user-secret" style="font-size: 60px; color: white; transition: all 0.4s;"></i>
+                  </div>
+                  <h4 style="color: white; font-size: 18px; font-weight: 700; margin: 0;">Executive Protection</h4>
+              </div>
+          </div>
+          
+          <!-- Service 15: Automotive Dealers -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+              <div style="background: transparent; border: 2px solid #1a3a6b; padding: 40px 20px; text-align: center; cursor: pointer; transition: all 0.4s; height: 100%;"
+                   onmouseover="this.style.background='#1a3a6b'; this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(26, 58, 107, 0.5)'"
+                   onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                  <div style="margin-bottom: 25px;">
+                      <i class="fas fa-car" style="font-size: 60px; color: white; transition: all 0.4s;"></i>
+                  </div>
+                  <h4 style="color: white; font-size: 18px; font-weight: 700; margin: 0;">Automotive Dealers</h4>
+              </div>
+          </div>
+          
+          <!-- Service 16: View All -->
+          <div class="col-lg-3 col-md-4 col-sm-6">
+              <div style="background: transparent; border: 2px solid #1a3a6b; padding: 40px 20px; text-align: center; cursor: pointer; transition: all 0.4s; height: 100%;"
+                   onmouseover="this.style.background='#1a3a6b'; this.style.transform='translateY(-10px)'; this.style.boxShadow='0 15px 40px rgba(26, 58, 107, 0.5)'"
+                   onmouseout="this.style.background='transparent'; this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                  <div style="margin-bottom: 25px;">
+                      <i class="fas fa-arrow-right" style="font-size: 60px; color: white; transition: all 0.4s;"></i>
+                  </div>
+                  <h4 style="color: white; font-size: 18px; font-weight: 700; margin: 0;">View All</h4>
+              </div>
+          </div>
+          
       </div>
-  
-    </div>
-  
-  </section>
-  <section class="client-strip py-4">
-    <div class="client-strip-wrapper">
-        <div class="client-strip-track">
-            <div class="client-logo"><img src="https://www.mgae.com/wp-content/uploads/2024/09/logo-latest.png" alt="Client 1"></div>
-            <div class="client-logo"><img src="https://www.ford-construction.com/templates/ford18/custom/images/logo.svg" alt="Client 2"></div>
-            <div class="client-logo"><img src="/images/Wells_Fargo_Logo_(2020).svg.png" alt="Client 3"></div>
-            <div class="client-logo"><img src="/images/Essex_Property_Trust_logo.svg.png" alt="Client 4"></div>
-            <div class="client-logo"><img src="/images/client5.png" alt="Client 5"></div>
-            <div class="client-logo"><img src="/images/client6.png" alt="Client 6"></div>
-
-           
-        </div>
-    </div>
-</section>
-  
-  <section id="services" class="services-section py-5">
-    <div class="container">
-        <div class="section-header text-center mb-5">
-            <h2 class="section-title mb-3">Sectors We Serve</h2>
-            <p class="section-subtitle">Comprehensive, specialized protection tailored for your industry</p>
-        </div>
-        
-        <div class="row g-4 justify-content-center">
-            
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="service-card text-center" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="service-icon"><i class="fas fa-building"></i></div>
-                    <h5 class="service-title">Corporate Security</h5>
-                    <p class="service-text-small">Protecting headquarters, assets, and personnel.</p>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="service-card text-center" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-                    <h5 class="service-title">Financial Institutions</h5>
-                    <p class="service-text-small">Secure handling of high-value environments and data.</p>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="service-card text-center" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="service-icon"><i class="fas fa-store"></i></div>
-                    <h5 class="service-title">Retail Venues</h5>
-                    <p class="service-text-small">Theft deterrence, surveillance, and customer safety.</p>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="service-card text-center" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="service-icon"><i class="fas fa-cart-shopping"></i></div>
-                    <h5 class="service-title">Shopping Centers</h5>
-                    <p class="service-text-small">Crowd management and large-scale premises security.</p>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="service-card text-center" data-aos="zoom-in" data-aos-delay="500">
-                    <div class="service-icon"><i class="fas fa-house-medical"></i></div>
-                    <h5 class="service-title">Medical Facilities</h5>
-                    <p class="service-text-small">Patient, staff, and sensitive data protection.</p>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="service-card text-center" data-aos="zoom-in" data-aos-delay="600">
-                    <div class="service-icon"><i class="fas fa-id-card"></i></div>
-                    <h5 class="service-title">Business Complexes</h5>
-                    <p class="service-text-small">Access control and common area patrolling.</p>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="service-card text-center" data-aos="zoom-in" data-aos-delay="700">
-                    <div class="service-icon"><i class="fas fa-helmet-safety"></i></div>
-                    <h5 class="service-title">Construction Sites</h5>
-                    <p class="service-text-small">Equipment security and unauthorized entry prevention.</p>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="service-card text-center" data-aos="zoom-in" data-aos-delay="800">
-                    <div class="service-icon"><i class="fas fa-bed"></i></div>
-                    <h5 class="service-title">Hotels and Motels</h5>
-                    <p class="service-text-small">Guest safety and hospitality-focused security.</p>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="service-card text-center" data-aos="zoom-in" data-aos-delay="900">
-                    <div class="service-icon"><i class="fas fa-city"></i></div>
-                    <h5 class="service-title">Apartments & Condominiums</h5>
-                    <p class="service-text-small">Residential patrolling and community protection.</p>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="service-card text-center" data-aos="zoom-in" data-aos-delay="1000">
-                    <div class="service-icon"><i class="fas fa-car-on"></i></div>
-                    <h5 class="service-title">Automotive Dealers</h5>
-                    <p class="service-text-small">Vehicle and inventory protection.</p>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="service-card text-center service-special" data-aos="zoom-in" data-aos-delay="1100">
-                    <div class="service-icon"><i class="fas fa-location-dot"></i></div>
-                    <h5 class="service-title">Event Security</h5>
-                    <p class="service-text-small">Specialized security for high-profile gatherings.</p>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="service-card text-center service-special" data-aos="zoom-in" data-aos-delay="1200">
-                    <div class="service-icon"><i class="fas fa-user-tie"></i></div>
-                    <h5 class="service-title">Executive Protection</h5>
-                    <p class="service-text-small">Personal, discreet security for high-profile clients.</p>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="service-card text-center service-special" data-aos="zoom-in" data-aos-delay="1300">
-                    <div class="service-icon"><i class="fas fa-headset"></i></div>
-                    <h5 class="service-title">Concierge/Desk Security</h5>
-                    <p class="service-text-small">Front-facing security and visitor management.</p>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="service-card text-center service-special" data-aos="zoom-in" data-aos-delay="1400">
-                    <div class="service-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
-                    <h5 class="service-title">Loss Prevention</h5>
-                    <p class="service-text-small">Strategic planning to minimize financial loss.</p>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="service-card text-center service-special" data-aos="zoom-in" data-aos-delay="1500">
-                    <div class="service-icon"><i class="fas fa-user-shield"></i></div>
-                    <h5 class="service-title">Security Guard</h5>
-                    <p class="service-text-small">Trained, professional uniformed security officers.</p>
-                </div>
-            </div>
-
-        </div>
-        
-        <div class="text-center mt-5">
-            <a href="/services.html" class="btn btn-primary-animate">View All Services <i class="fas fa-arrow-right ms-2"></i></a>
-        </div>
-    </div>
+  </div>
 </section>
 <!-- SECTION 4: ABOUT / WHY CHOOSE US -->
 <section id="about" class="about-section py-5">
