@@ -85,12 +85,18 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6 mb-2 mb-md-0 text-center text-md-start">
-                <!-- Logo -->
-                <img src="/images/logo-removebg-preview.png" 
-                     alt="Rubicon Security Logo" 
-                     style="height: 90px; width: auto;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <img src="/images/logo-removebg-preview.png" 
+                         alt="Rubicon Security Logo" 
+                         style="height: 90px; width: auto;">
+            
+                    <h1 style="margin: 0; color: black; font-weight: 700;">Tk Security</h1>
+                </div>
             </div>
-            <div class="col-md-6">
+            
+            
+            <div class="col-md-6 header-contact-section">
+
                 <div class="row g-3">
                     <!-- Phone -->
                     <div class="col-sm-6 text-center text-sm-start">
@@ -122,7 +128,28 @@
         </div>
     </div>
 </div>
+<style>
+    @media (max-width: 575px) {
 
+/* Center logo + text on mobile */
+.topbar-wrapper .row {
+    text-align: center;
+    justify-content: center;
+}
+
+.topbar-title {
+    font-size: 20px;
+    margin-left: 8px;
+}
+
+.topbar-logo {
+    height: 60px;
+}
+.header-contact-section {
+        display: none !important;
+    }
+}
+</style>
 <!-- Main Navigation -->
 <nav class="navbar navbar-expand-lg" style="background: #1557b0; padding: 0;">
     <div class="container">
@@ -289,12 +316,34 @@
             </div>
         </div>
     </div>
+    <style>
+        .white-placeholder::placeholder {
+            color: white !important;
+            opacity: 1 !important;
+        }
+        /* Desktop form offset */
+.quote-form-box {
+    background: #5b9cf5;
+    padding: 50px 40px;
+    margin-top: -250px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    animation: slideInForm 1s ease 0.5s both;
+}
+
+/* Mobile margin fix using Bootstrap breakpoint */
+@media (max-width: 767.98px) {
+    .quote-form-box {
+        margin-top: 0px !important; /* UPPER LAYE BYE-BYE GAP */
+        padding: 35px 25px; /* Mobile friendly padding */
+    }
+}
+    </style>
     
     <!-- Overlapping Form (Half Hero, Half Below) -->
     <div class="container" style="position: relative; z-index: 20;">
         <div class="row justify-content-end">
             <div class="col-lg-5 col-md-7">
-                <div style="background: #5b9cf5; padding: 50px 40px; margin-top: -250px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); animation: slideInForm 1s ease 0.5s both;">
+                <div class="quote-form-box">
                     <h2 style="color: white; font-size: 32px; font-weight: 700; text-transform: uppercase; margin-bottom: 35px; text-align: center; letter-spacing: 1px;">
                         REQUEST A QUOTE NOW
                     </h2>
@@ -303,50 +352,72 @@
                         <!-- Name -->
                         <div style="margin-bottom: 25px;">
                             <input type="text" placeholder="Name" required
-                                   style="width: 100%; background: transparent; border: none; border-bottom: 2px solid rgba(255,255,255,0.5); padding: 12px 0; color: white; font-size: 16px; outline: none;"
+                                   class="white-placeholder"
+                                   style="width: 100%; background: transparent; border: none; 
+                                          border-bottom: 2px solid rgba(255,255,255,0.5); 
+                                          padding: 12px 0; color: white; font-size: 16px; outline: none;"
                                    onfocus="this.style.borderBottom='2px solid white'"
                                    onblur="this.style.borderBottom='2px solid rgba(255,255,255,0.5)'">
                         </div>
                         
                         <!-- Phone -->
                         <div style="margin-bottom: 25px;">
-                            <input type="tel" placeholder="Phone" required
-                                   style="width: 100%; background: transparent; border: none; border-bottom: 2px solid rgba(255,255,255,0.5); padding: 12px 0; color: white; font-size: 16px; outline: none;"
+                            <input type="text" placeholder="Phone" required
+                                   class="white-placeholder"
+                                   style="width: 100%; background: transparent; border: none; 
+                                          border-bottom: 2px solid rgba(255,255,255,0.5); 
+                                          padding: 12px 0; color: white; font-size: 16px; outline: none;"
                                    onfocus="this.style.borderBottom='2px solid white'"
                                    onblur="this.style.borderBottom='2px solid rgba(255,255,255,0.5)'">
                         </div>
                         
                         <!-- Company -->
                         <div style="margin-bottom: 25px;">
-                            <input type="text" placeholder="Company"
-                                   style="width: 100%; background: transparent; border: none; border-bottom: 2px solid rgba(255,255,255,0.5); padding: 12px 0; color: white; font-size: 16px; outline: none;"
+                            <input type="text" placeholder="Compony" required
+                                   class="white-placeholder"
+                                   style="width: 100%; background: transparent; border: none; 
+                                          border-bottom: 2px solid rgba(255,255,255,0.5); 
+                                          padding: 12px 0; color: white; font-size: 16px; outline: none;"
                                    onfocus="this.style.borderBottom='2px solid white'"
                                    onblur="this.style.borderBottom='2px solid rgba(255,255,255,0.5)'">
                         </div>
+                        
                         
                         <!-- Email -->
                         <div style="margin-bottom: 25px;">
-                            <input type="email" placeholder="Email" required
-                                   style="width: 100%; background: transparent; border: none; border-bottom: 2px solid rgba(255,255,255,0.5); padding: 12px 0; color: white; font-size: 16px; outline: none;"
+                            <input type="text" placeholder="Email" required
+                                   class="white-placeholder"
+                                   style="width: 100%; background: transparent; border: none; 
+                                          border-bottom: 2px solid rgba(255,255,255,0.5); 
+                                          padding: 12px 0; color: white; font-size: 16px; outline: none;"
                                    onfocus="this.style.borderBottom='2px solid white'"
                                    onblur="this.style.borderBottom='2px solid rgba(255,255,255,0.5)'">
                         </div>
+                        
                         
                         <!-- Location -->
                         <div style="margin-bottom: 25px;">
-                            <input type="text" placeholder="Your Location"
-                                   style="width: 100%; background: transparent; border: none; border-bottom: 2px solid rgba(255,255,255,0.5); padding: 12px 0; color: white; font-size: 16px; outline: none;"
+                            <input type="text" placeholder="Location" required
+                                   class="white-placeholder"
+                                   style="width: 100%; background: transparent; border: none; 
+                                          border-bottom: 2px solid rgba(255,255,255,0.5); 
+                                          padding: 12px 0; color: white; font-size: 16px; outline: none;"
                                    onfocus="this.style.borderBottom='2px solid white'"
                                    onblur="this.style.borderBottom='2px solid rgba(255,255,255,0.5)'">
                         </div>
                         
+                        
                         <!-- Message -->
-                        <div style="margin-bottom: 35px;">
-                            <textarea placeholder="Message" rows="4"
-                                      style="width: 100%; background: transparent; border: none; border-bottom: 2px solid rgba(255,255,255,0.5); padding: 12px 0; color: white; font-size: 16px; outline: none; resize: none;"
-                                      onfocus="this.style.borderBottom='2px solid white'"
-                                      onblur="this.style.borderBottom='2px solid rgba(255,255,255,0.5)'"></textarea>
+                        <div style="margin-bottom: 25px;">
+                            <input type="text" placeholder="Message" required
+                                   class="white-placeholder"
+                                   style="width: 100%; background: transparent; border: none; 
+                                          border-bottom: 2px solid rgba(255,255,255,0.5); 
+                                          padding: 12px 0; color: white; font-size: 16px; outline: none;"
+                                   onfocus="this.style.borderBottom='2px solid white'"
+                                   onblur="this.style.borderBottom='2px solid rgba(255,255,255,0.5)'">
                         </div>
+                        
                         
                         <!-- Submit Button -->
                         <div style="text-align: center;">

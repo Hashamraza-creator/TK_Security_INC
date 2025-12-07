@@ -813,16 +813,16 @@ to { opacity: 1; transform: translateX(0); }
 
 /* ===================== CONTACT SECTION ===================== */
 .contact-section {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  background: #5b9cf5;
   color: white;
 }
 
 .contact-section .section-title {
-  color: white;
+  color: black;
 }
 
 .contact-section .section-title::after {
-  background: linear-gradient(90deg, white, rgba(255, 255, 255, 0.7));
+  background: linear-gradient(90deg, black, rgba(255, 255, 255, 0.7));
 }
 
 .contact-section .section-subtitle {
@@ -874,7 +874,8 @@ to { opacity: 1; transform: translateX(0); }
 }
 
 .contact-form .btn {
-  background-color: var(--success-color);
+  background-color: black;
+  
   border: none;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -885,6 +886,9 @@ to { opacity: 1; transform: translateX(0); }
   background-color: #2d8659;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(52, 168, 83, 0.3);
+}
+.contact-form .btn i {
+color: black;
 }
 
 /* ===================== FOOTER ===================== */
